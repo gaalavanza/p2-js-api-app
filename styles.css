@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-image: url(/image/large-vegetables.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+section {
+  text-align: center;
+  padding: 60px 0 100px;
+  font-size: 1.5rem;
+}
+
+header {
+  z-index: 5;
+  width: 100%;
+  position: fixed;
+}
+
+header .navbar {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.navbar .nav-logo .logo-text {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.navbar .nav-menu {
+  gap: 10px;
+  display: flex;
+}
+
+.navbar .nav-menu .nav-link {
+  padding: 10px 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 1.12rem;
+  border: 1px solid #F5F5DC;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+  color: #006400;
+  background: #FFFFFF;
+  border-style: outset;
+  border-radius: 30px;
+}
+
+.navbar .nav-menu .active {
+  color: #006400;
+  background: #FFFFFF;
+}
+
+.hero-section {
+  min-height: 100vh;
+}
+.hero-section .section-content {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: space-around;
+}
+
+.hero-section .hero-details .title {
+  font-size: 4.5rem;
+  color: #FFFF00;
+  font-family: "Miniver", sans-serif;
+  text-shadow: 5px 2px #FF0000;
+}
+
+.hero-section .hero-details .subtitle {
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: normal;
+}
+
+.hero-section .hero-details .description {
+  max-width: 100%;
+  margin: 3rem auto;
+  align-items: center;
+  font-size: 3rem;
+  font-style: italic;
+  color: #3CFF00;
+  text-shadow: 2px 2px #FF0000;
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Media Queries */
+
+/* For Tablets */
+@media only screen and (max-width: 1024px) {
+  .navbar .nav-menu .nav-link {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+
+  .hero-section .hero-details .title {
+    font-size: 3.5rem;
+  }
+
+  .hero-section .hero-details .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-section .hero-details .description {
+    font-size: 2.5rem;
+  }
+}
+
+/* For Mobile Phones */
+@media only screen and (max-width: 768px) {
+  header .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    position: absolute; 
+    top: 60px; 
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 10; 
+  }
+
+  .navbar .nav-menu .nav-link {
+    padding: 10px;
+    font-size: 0.7rem;
+    text-align: center; 
+  }
+
+  .hero-section .hero-details .title {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .hero-details .subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-section .hero-details .description {
+    font-size: 1.5rem;
+  }
+}
+
+/* For Laptops and Desktops */
+@media only screen and (min-width: 1025px) {
+  .navbar .nav-menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    font-size: 1.12rem;
+  }
+
+  .hero-section .hero-details .title {
+    font-size: 4.5rem;
+  }
+
+  .hero-section .hero-details .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-section .hero-details .description {
+    font-size: 3rem;
+  }
+
+  .section-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

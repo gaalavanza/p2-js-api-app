@@ -1,0 +1,282 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(/image/large-vegetables.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto;
+  backdrop-filter: blur(5px);
+  padding-top: 80px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+  header {
+    z-index: 5;
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+  
+  header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+
+  .navbar .nav-logo .logo-text {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+
+  .navbar .nav-menu {
+    gap: 10px;
+    display: flex;
+  }
+
+  .navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 1.12rem;
+    border: 1px solid #F5F5DC;
+    border-radius: 30px;
+    transition: 0.3s ease;
+  }
+
+  .navbar .nav-menu .nav-link:hover {
+  color:#006400;
+  background: #FFFFFF;
+  border-style: outset;
+  border-radius: 30px;
+  }
+
+  .navbar .nav-menu .active {
+    color: #006400;
+    background: #FFFFFF;
+  }
+  
+
+  input {
+    margin-right: 10px;
+    padding: 0.5rem;
+}
+
+.voice-container {
+  background-color: rgba(0,0,0, 0.4); 
+  color: black;
+  font-weight: bold;
+  border: 3px solid #F1F1F1;
+  position: relative;
+  margin: 10rem auto;
+  width: 80%;
+  padding: 20px 0;
+  text-align: center;
+  max-height: calc(100vh - 100px); 
+  overflow-y: auto; 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#add-manual-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-manual-btn:hover {
+    background-color: #007BFF;
+    color: #FFFFFF;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #DDDDDD;
+    color: black;
+}
+
+th {
+    background-color: #F2F2F2;
+}
+
+td button {
+    background: #FF0000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+td button:hover {
+    background: #8B0000;
+}
+
+#start-record-btn {
+  color: #FFFFFF; 
+  border: 1px solid #000000; 
+  padding: 20px 30px; 
+  cursor: pointer; 
+}
+
+#start-record-btn.listening {
+  color: #FFFFFF; 
+  background-color: #000000; 
+}
+
+#start-record-btn:not(.listening) {
+  color: #000000; 
+  background-color: #30F709;  
+}
+
+.hidden {
+    display: none;
+}
+
+#loading-indicator {
+    text-align: center;
+    color: #007BFF;
+    margin: 10px 0;
+}
+
+#confirmation-message {
+    text-align: center;
+    color: #008000;
+    margin: 10px 0;
+}
+
+/* Media Queries */
+
+/* For Tablets */
+@media only screen and (max-width: 1024px) {
+  .navbar .nav-menu .nav-link {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #add-manual-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+/* For Mobile Phones */
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+  
+  header .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 10; 
+  }
+
+  .nav-menu.active {
+    display: flex; 
+  }
+
+  .navbar .nav-menu .nav-link {
+    padding: 10px;
+    font-size: 0.7rem;
+    text-align: center; 
+  }
+
+  .voice-container {
+    margin-top: 10rem;
+  }
+  .container {
+    padding: 10px;
+    width: 90%; 
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #add-manual-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+}

@@ -1,0 +1,299 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  }
+  
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(/image/large-vegetables.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+header {
+    z-index: 5;
+    width: 100%;
+    position: fixed;
+  }
+
+  header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+
+  .navbar .nav-logo .logo-text {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+
+  .navbar .nav-menu {
+    gap: 10px;
+    display: flex;
+  }
+
+  .navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 1.12rem;
+    border: 1px solid #F5F5DC;
+    border-radius: 30px;
+    transition: 0.3s ease;
+  }
+  
+  .navbar .nav-menu .nav-link:hover {
+    color:#006400;
+  background: #FFFFFF;
+  border-style: outset;
+  border-radius: 30px;
+  }
+
+  .navbar .nav-menu .active {
+    color: #006400;
+    background: #FFFFFF;
+  }  
+ 
+input {
+    margin-right: 10px;
+    padding: 0.5rem;
+}
+
+ul #itemList {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+li #itemList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 18px;
+    border: 2px solid #7FFF00;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+ #speakItemsButton {
+  background-color: #0000FF; 
+  color: #FFFFFF;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 10px 18px;
+  margin-left: 10px; 
+}
+
+ #stopSpeakingButton {
+  background-color: #FF0000; 
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 10px 18px;
+  margin-left: 10px;
+}
+
+li button {
+  background: #FF0000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.item-list {
+  max-width: 600px;
+  margin: auto;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: auto;
+}
+
+.item-list h1 {
+  margin-bottom: 1rem;
+}
+
+.container {
+  background-color: rgba(0,0,0, 0.4); 
+  color: #000000;
+  font-weight: bold;
+  border: 3px solid #F1F1F1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#itemTable {
+  width: 100%;
+  border-collapse: collapse;
+  max-height: 200px; 
+  overflow-y: auto; 
+  display: table; 
+}
+
+#itemTable thead {
+  display: table-header-group; 
+}
+
+#itemTable tbody {
+  display: table-row-group; 
+  max-height: 100%; 
+  overflow-y: auto; 
+  height: 200px; 
+  display: block;
+}
+
+#itemTable tr {
+  display: table; 
+  width: 100%; 
+}
+
+.table-wrapper {
+  max-height: 200px; 
+  overflow-y: auto; 
+}
+
+th, td {
+  border: 1px solid #DDDDDD;
+  padding: 8px;
+  text-align: left;
+  width: 33%; 
+}
+
+th {
+  background-color: #F2F2F2;
+}
+
+tr:hover {
+  background-color: #F1F1F1;
+}
+
+.remove-button {
+  background-color: #FF0000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.remove-button:hover {
+  background-color: #8B0000; 
+}
+
+/* Media Queries */
+
+/* For Tablets */
+@media only screen and (max-width: 1024px) {
+  .navbar .nav-menu .nav-link {
+      padding: 8px 15px;
+      font-size: 0.8rem;
+  }
+
+  .item-list h1 {
+      font-size: 2rem;
+  }
+
+  .item-list {
+      padding: 15px;
+  }
+
+  button {
+      padding: 8px 15px;
+  }
+
+  #speakItemsButton, #stopSpeakingButton {
+      padding: 8px 15px;
+  }
+}
+
+/* For Mobile Phones */
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+  
+  header .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar .nav-menu {
+      flex-direction: column;
+      width: 100%;
+      position: absolute; 
+      top: 60px; 
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8); 
+      z-index: 10; 
+  }
+
+  .nav-menu.active {
+      display: flex; 
+  }
+
+  .navbar .nav-menu .nav-link {
+      padding: 10px;
+      font-size: 0.7rem;
+      text-align: center;  
+  }
+
+  .container {
+    top: 60%;
+  }
+
+  .item-list h1 {
+      font-size: 1.5rem;
+  }
+
+  .item-list {
+      padding: 10px;
+  }
+
+  button {
+      padding: 8px 12px;
+  }
+
+  #speakItemsButton, #stopSpeakingButton {
+      padding: 8px 12px;
+  }
+}
