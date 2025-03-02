@@ -12,7 +12,7 @@ a {
   text-decoration: none;
 }
 body {
-  background-image: url(/image/large-vegetables.jpg);
+  background-image: url(image/large-vegetables.jpg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
